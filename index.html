@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>QwynTasty | Home</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&family=Special+Elite&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Rye&family=Special+Elite&display=swap');
+        
+
+        #titlebanner {
+            width: 1440px;
+            height: 200px;
+            background-image: url(https://lh3.googleusercontent.com/WmUd6hHoc0d9j24XTOu_AKAmFZUmGyb6azZcgN_k81sHLehLWbLpsXJElyGDXZTtYbUGcchItcisszcqkUDV7XPuyEy5kYv2G7cy2Jyajro99XUdJbUqM3mBlnCXx78S7xOp40zGGW5eMJN8WhuQ0hApVWEjUkJrCfQWjixUgbUdgMYlA7EIOmN84QyHwzmchMLKLhFjI_QdVL63CYXHOCQD8fHmsVJKmRv_JX6tghl-QmR65EjD4WNMmo2Rc1nt0yy6TtvhlG7iJIXqr5OBe1GWd90x_Yzb9kUdJ4nnlo_j7_-1jeOj5YKeJCmxeO0nNj34Ajc5hSkDEksxhMDJmS9DpeuP7TsySeMQcHqIn6JQycQ_IdtTicaLmQSmsCbZEvwr92KMfiWjb0Umn_H7T5NxdJcvArt3DjmNKtksx5koVyh5QQf4Nsx5YQB5xmzkcsrrWn7gtMeLpAB-ba_BbgALpKFD5ENFll6ZYLFKvkvMG3QWSVq4gxGk6-2XToGOUO7sChJOBo-uwOJpWlTJvofsvTeivLRggJVEz6-Zi9vRJFAHVLI5DQ9qiMN_yr1AMzCz0vFHWKcrGPWw5rxOm3Nj7da-I_bvr4E_I7oS6sGyApIUHr4FJnZ1mTSHlLvc_ziW6T8CbbaNBvXF0oeav4JEBApM5juZZKrlJuqUJ9H32VHZy2fKkg-aKyg0e3QBoL_PgEys98WvBRlmc_8tBqZM=w1440-h200-no?authuser=0);
+            margin-left: -8px;
+            margin-top: -8px;
+            background-position: center;
+        }
+
+        .navbar {
+            margin-left: -8px;
+            background-color: #E8D5C4;
+            width: 1440px;
+            overflow-x: hidden;
+        }
+
+        .navbarcell {
+            padding-left: 20px;
+        }
+
+        .navbar-content a {
+            font-family: 'Special Elite', cursive;
+            padding-left: 20px;
+            padding-right: 20px;
+            font-size: 20pt;
+            color: black;
+            text-decoration: none;
+            text-align: center;
+        }
+
+        .navbar-content a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #navbar-date {
+            text-align: right;
+            font-family: 'Special Elite', cursive;
+            padding-right: 30px;
+            font-size: 20pt;
+            color: black;
+            width: 570px;
+        }
+
+        #firstpart {
+            margin-left: -8px;
+            width: 1440px;
+            margin-top: 30px;
+            overflow-x: hidden;
+        }
+
+        #headline {
+            width: 70%;
+            border-right: 2px solid black;
+            padding-left: 40px;
+            padding-right: 30px;
+        }
+
+        .headline-pic {
+            width: 900px;
+            border: 1px solid black;
+        }
+
+        #headline-caption a {
+            font-family: 'Special Elite', cursive;
+            text-decoration: none;
+            color: black;
+            font-size: 30pt;
+        }
+
+        #headline-caption a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #headline-articlepart {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16pt;
+        }
+
+        #headline-pic {
+            width: 938px
+        }
+
+        #more-stories {
+            width: 30%;
+            padding-left: 30px;
+            vertical-align: top;
+            overflow-x: hidden;
+        }
+
+        #more-stories-title {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 30pt;
+            color: black;
+            margin-top: 15px;
+            margin-bottom: -5px;
+        }
+
+        .more-stories-articles a {
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 16pt;
+            text-align: left;
+            color: black;
+        }
+
+        .more-stories-articles a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        #secondpic {
+            width: 1440px;
+            margin-left: -8px;
+            margin-top: -15px;
+        }
+
+        #secondpart-content {
+            width: 35%;
+            text-align: left;
+            padding-right: 20px;
+            vertical-align: middle;
+        }
+
+        #secondpart-topic {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            color: white;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        #secondpart-topic a {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 38pt;
+            color: white;
+            vertical-align: middle;
+            text-decoration: none;
+        }
+
+        #secondpart-topic a:hover {
+            text-decoration: underline;
+        }
+
+        #secondpart-descriptions {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 18pt;
+            color: white;
+            vertical-align: top;
+            margin-top: -25px;
+        }
+
+        .secondpart-articles {
+            width: 30%;
+            text-align: left;
+            font-size: 24pt;
+            vertical-align: middle;
+            padding-right: 20px;
+            margin-top: -30px;
+        }
+
+        .secondpart-articles-headlines {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+            font-size: 16pt;
+            vertical-align: middle;
+        }
+
+        .seemore a {
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            float: right;
+            text-decoration: none;
+            font-size: 13pt;
+        }
+
+        .seemore a:hover {
+            text-decoration:underline;
+            font-weight: bold;
+            color: #332B32;
+        }
+
+        .secondpart-articles-headlines1 {
+            color: black;
+            font-family: 'Montserrat', sans-serif;
+            text-align: left;
+            font-size: 16pt;
+            vertical-align: middle;
+            margin-bottom: 20px;
+        }
+
+        .mealplans {
+            margin-left: 30px;
+            margin-top: 45px;
+        }
+
+        .mealplans-headline a {
+            text-align: left;
+            font-family: 'Special Elite', cursive;
+            font-size: 32pt;
+            color: black;
+            vertical-align: top;
+            text-decoration: none;
+        }
+
+        .mealplans-headline a:hover {
+            text-decoration: underline;
+            color: #332B32;
+        }
+
+        .mealplans-articlesection {
+            padding-right: 30px;
+            vertical-align: top;
+            overflow-x: hidden;
+            margin-top: 20px;
+        }
+
+        .mealplans-articlecells {
+            width: 33.33%;
+            padding-right: 30px;
+            overflow-x: hidden;
+        }
+
+        .mealplans-pic {
+            width: 430px;
+            height: 150px;
+            object-fit: cover;
+            border: 2px solid black
+        }
+
+        .mealplans-articles a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 18pt;
+            color: black;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .mealplans-articles a:hover {
+            color: #332B32;
+            text-decoration: underline;
+        }
+
+        .footer {
+            width: 1440px;
+            height: 350px;
+            background-color: #332B32;
+            margin-left: -8px;
+            margin-top: 20px;
+            overflow-x: hidden;
+        }
+
+        .footer-headlines {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 24pt;
+            text-align: center;
+            vertical-align: top;
+        }
+
+        .footer-details {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: -12px;
+        }
+
+        .footer-copyright {
+            color: white;
+            font-family: 'Special Elite', cursive;
+            font-size: 16pt;
+            text-align: center;
+            vertical-align: top;
+            margin-top: 10px;
+        }
+    </style>
+    </head>
+
+    <body style="width: 1440px; margin: 0px">
+        <div id="titlebanner"></div>
+        
+        <table class="navbar">
+            <tr>
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="index.html">HOME</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_recipes.html">RECIPES</a></p>
+                </td>
+ 
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_chefs.html">CHEFS</a></p>
+                </td>
+
+                <td class="navbarcell">
+                    <p class="navbar-content"><a href="aliyahqwynzy_about.html">ABOUT</a></p>
+                </td>
+
+                <td id="navbar-date">
+                    <p>NOVEMBER | 2021</p>
+                </td>
+            </tr>
+        </table>
+
+        <div style="width: 1410px; margin-bottom: 30px;">
+            <p style="font-family: 'Special Elite', cursive; font-size: 36pt; text-align: center; margin-bottom: -10px;">FOOD. WHAT IS FOOD?</p>
+            <p style="font-family: 'Montserrat', sans-serif; font-size: 18pt; text-align: center; margin-bottom: -10px;">If we would take it literally, it is any nutritious substance that people or animals eat or drink or that plants absorb <br>in order to maintain life and growth. But, it is actually more than that. It is not just for nutrition. For many <br>people, food is one the things the comforts them when they are down... Food also brings families and people together, and it strengthens their relationship.</p>
+            <p style="font-family: 'Special Elite', cursive; font-size: 36pt; text-align: center; margin-bottom: -10px;">FOOD IS HAPPINESS</p>
+            </div>
+
+        <table id="firstpart">
+            
+            <tr>
+                <td id="headline">
+                    <p style="font-family: 'Special Elite', cursive; font-size: 34pt; text-align: left; margin-bottom: 30px; text-decoration: underline; margin-top: 15px;">FOODIE STORY OF THE DAY</p>
+                    <p id="headline-caption"><a href="https://panlasangpinoy.com/top-10-filipino-christmas-recipes/#:~:text=The%20Filipino%20Christmas%20tradition%20won,Buena%20(Christmas%20Eve%20Dinner).&text=The%20dishes%20served%20usually%20comes,only%20prepared%20once%20a%20year.">1 Month 'Till Christmas! Here are the Best Dishes to Cook to Make Christmas this year More Special</a></p>
+                    <p id="headline-articlepart">The Filipino Christmas tradition won’t be complete without Noche Buena (Christmas Eve Dinner). During this special meal, families and friends gather together to share a delightful meal and wish everyone a Joyous Christmas. The dishes served usually comes from the Family’s Christmas Recipe collection, or they can be something special and only prepared once a year.</p>
+                    <img src="https://www.panaynews.net/wp-content/uploads/2018/12/Lechon.jpg" alt="Christmas Foods" class="headline-pic">
+                </td>
+
+                <td id="more-stories">
+                    <p id="more-stories-title">More Foodie Stories</p>
+
+                    <p class="more-stories-articles"><a href="https://www.saveur.com/food/wild-game-cookbooks-teach-you-how-to-prep-venison-boar-and-more/">These 11 Wild Game Cookbooks Will Teach You How To Prep Venison, Boar, and More</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/drinks/feral-apple-hunters-cider">Feral Apple Cider Should Be on Your Radar This Fall</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.ift.org/news-and-publications/food-technology-magazine/issues/2021/october/features/are-brands-still-relevant">Are Brands Still Relevant?</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.decanter.com/wine-news/major-wine-heist-in-spain-restaurant-owner-issues-plea-to-thieves-467989/">These 11 Wild Game Cookbooks Will Teach You How To Prep Venison, Boar, and More</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/lifestyle/pineapple-pizza-chefs">Pineapple on Pizza Is Actually Great, if You Do It Right</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.tasteofhome.com/article/starbucks-holiday-drinks/">Everything You Need to Know About Starbucks Holiday Drinks for 2021</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/holidays-events/thanksgiving/make-thanksgiving-extra">Give Thanks, But Make It Extra</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/holidays-events/thanksgiving/how-to-upgrade-your-gravy">The Only Thing Standing Between You and the Best Gravy of Your Life Is Your Own Fear of Greatness</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/holidays-events/thanksgiving/mac-n-cheese-rules-of-engagement">You Don't Get to Just Show Up with Mac 'n' Cheese at My House</a></p>
+
+                    <p class="more-stories-articles"><a href="https://www.foodandwine.com/holidays-events/thanksgiving/gravy-fountain">A Gravy Fountain Would Make Your Life So Much Better</a></p>
+                </td>
+            </tr>
+        </table>
+
+        <div>
+        <img src="https://lh3.googleusercontent.com/nYY5wOzNEx4x7AUhH9JJmX2wJWXFMqF_8b35Q8hzUfv8ulQ8MsGgb7U5StlF2fk6inTyOT8_GFtcZu7G2jcuTUrrb4rBbaCOZ_BcNlE9ZxkwcWNSxIE_lNg56QhEW0l4hotrrauYc-VKc4IPDgkqsx8IVIgd81uXS0E06qZFhomOIYd1R3w1oSSCdMgMCThzilwwyFlTtuLhXYVLoTIE1abjkm-tLcsj2WY1odq1XgPN-PwYvm-xV1w9vefHHxxrQZSakM-b_MTrG6WJZmtAVVk1b_YBUletJ1UmDpRh7YTn5L5Quy9YA0t8MsB2J9kzxuefRsCYueEuF8hh3mDxSXKNotS1r84z4KffzZQ7fAqMvFiNnUU1ritDF4T4Rsk9RGO7AFOyfq7a6zx8e5Bpn0tSG-s3u6zI-SX8dnMpremkDMW3HyvTE8ijhNwyGwQby8srjjOJLfXLF4vHTae4tAlpGoCPtsKEbG0ohmmAowJyhUZD5JzlNPhS7oU5Y3AprepKRc9OQ_OawmclK1dNhu9m61lIpHVJmUU6hU84EI7TCHrTyfa_Om_Km_bWh7a2CSh9YzuULqojDUOXfuvep3uX9kq_fpUgRliyC_CtS8fep3-Cm3WpGT9zkXL5a0c_tBssKEtnC_ra-rppRbAFAldCwsvwkp39Pbr-3jF9uWfQkQ4fc1f-zaodqHhmlp9VfybqjVGQK40WmKoGIa56Iino=w1920-h507-no?authuser=0" alt="cooking" id="secondpic">
+
+        <table style="position: absolute; margin-top: -320px; height: 190px; background-color: #332B32; width: 1440px; margin-left: -8px; overflow-x: hidden;">
+            <tr>
+                <td style="width: 40px;"></td>
+
+                <td id="secondpart-content">
+                    <p id="secondpart-topic"><a href="aliyahqwynzy_recipes.html">RECIPES</a> AND <a href="aliyahqwynzy_chefs.html">CHEFS:</a></p>
+                    <p id="secondpart-descriptions">Effortlessly Make the Hardest Dishes</p>
+                </td>
+                <td class="secondpart-articles">
+                    <p class="secondpart-articles-headlines">Make extraordinary meals for breakfast, lunch, and dinner by following the recipes! You deserve to taste the best-of-the-best dishes!</p>
+                    <p></p>
+                    <p></p>
+                </td>
+
+                <td class="secondpart-articles">
+                    <p class="secondpart-articles-headlines">Watch the best-of-the-best chefs that could help you learn how to cook various dishes faster! A demonstration could help!</p>
+                    <p></p>
+                    <p></p>
+                </td>
+
+                <td style="width: 40px;"></td>
+            </tr>
+        </table>
+        </div>
+
+        <div class="mealplans">
+            <p class="mealplans-headline"><a href="aliyahqwynzy_mealplans.html">MEAL PLANS</a></p>
+            <p style="text-align: left; font-size: 20pt; font-family: 'Special Elite', cursive; margin-top: -10px;margin-bottom: -20px;">EAT HEALTHY. LIVE HEALTHY</p>
+            <p class="secondpart-articles-headlines1">Want to be fit? Want to eat healthy? Want to enjoy eating despite your diseases? Here are the pearfect meal plans for you!</p>
+
+            <table class="mealplans-articlesection">
+                <tr>
+                <td class="mealplans-articlecells">
+                    <img src="https://static.onecms.io/wp-content/uploads/sites/44/2019/08/26232432/6908449.jpg" class="mealplans-pic" alt="meal">
+
+                    <p class="mealplans-articles"><a href="https://www.eatingwell.com/article/7797768/how-to-meal-prep-healthy-snacks-to-satisfy-any-craving/">How to Meal Prep Healthy Snacks to Satisfy Any Craving</a></p>
+                </td>
+
+                <td class="mealplans-articlecells">
+                    <img src="https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1244&h=622&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F44%2F2020%2F06%2F04%2FGrilled-Salmon-with-Sweet-Peppers.jpg" class="mealplans-pic" alt="meal">
+
+                    <p class="mealplans-articles"><a href="https://www.eatingwell.com/article/7894307/simple-30-day-weight-loss-meal-plan-for-summer/">Simple 30-Day Weight-Loss Meal Plan for Summer</a></p>
+                </td>
+
+                <td class="mealplans-articlecells">
+                    <img src="https://www.merakilane.com/wp-content/uploads/2018/01/21-Day-Anti-Inflammatory-Diet-to-Detox-and-Reduce-Inflammation-slider.jpg" class="mealplans-pic" alt="meal">
+
+                    <p class="mealplans-articles"><a href="https://www.eatingwell.com/article/7894310/anti-inflammatory-meal-plan-for-beginners/">Anti-Inflammatory Meal Plan for Beginners</a></p>
+
+                    <p class="seemore"><a href="aliyahqwynzy_mealplans.html">See more...</a></p>
+                </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="footer">
+            <table>
+                <tr>
+                    <td style="width: 350px;"></td>                 
+                    <td style="width: 350px; vertical-align: top;">
+                        <p class="footer-headlines">FOLLOW ME:</p>
+
+                        <p class="footer-details">FACEBOOK: QwynTasty</p>
+
+                        <p class="footer-details">TWITTER: QwynTasty</p>
+
+                        <p class="footer-details">INSTAGRAM: qwyntasty</p>
+                    </td>
+
+                    <td style="width: 350px; vertical-align: top;">
+                        <p class="footer-headlines">CONTACT ME:</p>
+
+                        <p class="footer-details">TELEPHONE #: (234) 235-5678</p>
+
+                        <p class="footer-details">E-MAIL: qwyntasty@gmail.com.ph</p>
+
+                        <p class="footer-details">ADDRESS: Sgt. Esguerra Avenue cor Mother Ignacia Street, Diliman, Quezon City 1103 Philippines</p>
+                    </td>
+
+                    <td style="width: 350px;"></td>
+                </tr>
+
+                <tr>
+                    <td colspan="4">
+                        <p class="footer-copyright">© 2021 QwynTasty. All Rights Reserved.</p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
