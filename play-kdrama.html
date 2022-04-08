@@ -1,0 +1,625 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <title>HulaHallyu | K-Drama</title>
+
+        <style>
+            .correctAnswer {
+
+            }
+
+            .wrongAnswer {
+
+            }
+
+            .options {
+
+            }
+            
+            /* FOR QUESTION 1 */
+            #notify_correctAnswer1 {
+                display: none;
+            }
+
+            #notify_wrongAnswer1 {
+                display: none;
+            }
+
+            /* FOR QUESTION 2 */
+            #question2 {
+                display: none;
+            }
+            
+            #notify_correctAnswer2 {
+                display: none;
+            }
+
+            #notify_wrongAnswer2 {
+                display: none;
+            }
+
+            /* FOR QUESTION 3 */
+            #question3 {
+                display: none;
+            }
+            
+            #notify_correctAnswer3 {
+                display: none;
+            }
+
+            #notify_wrongAnswer3 {
+                display: none;
+            }
+
+            /* FOR QUESTION 4 */
+            #averageRound {
+                display: none;
+            }
+            
+            #notify_correctAnswer4 {
+                display: none;
+            }
+
+            #notify_wrongAnswer4 {
+                display: none;
+            }
+
+            /* FOR QUESTION 5 */
+            #question5 {
+                display: none;
+            }
+            
+            #notify_correctAnswer5 {
+                display: none;
+            }
+
+            #notify_wrongAnswer5 {
+                display: none;
+            }
+
+            /* FOR QUESTION 6 */
+            #question6 {
+                display: none;
+            }
+            
+            #notify_correctAnswer6 {
+                display: none;
+            }
+
+            #notify_wrongAnswer6 {
+                display: none;
+            }
+
+            /* FOR QUESTION 7 */
+            #difficultRound {
+                display: none;
+            }
+            
+            #notify_correctAnswer7 {
+                display: none;
+            }
+
+            #notify_wrongAnswer7 {
+                display: none;
+            }
+
+            /* FOR QUESTION 8 */
+            #question8 {
+                display: none;
+            }
+            
+            #notify_correctAnswer8 {
+                display: none;
+            }
+
+            #notify_wrongAnswer8 {
+                display: none;
+            }
+
+            /* FOR QUESTION 9 */
+            #question9 {
+                display: none;
+            }
+            
+            #notify_correctAnswer9 {
+                display: none;
+            }
+
+            #notify_wrongAnswer9 {
+                display: none;
+            }
+
+            #vid1 {
+                display: none;
+            }
+            
+        </style>
+
+        <script>
+            var score = 0;
+
+            /* FOR QUESTION 1 */
+            function correctAnswer1() {
+                document.getElementById("notify_correctAnswer1").style.display="block";
+                score++;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion1Option1').disabled = true;
+                document.getElementById('easyQuestion1Option2').disabled = true;
+                document.getElementById('easyQuestion1Option3').disabled = true;
+                document.getElementById('easyQuestion1Option4').disabled = true;
+            }
+
+            function wrongAnswer1() {
+                document.getElementById("notify_wrongAnswer1").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion1Option1').disabled = true;
+                document.getElementById('easyQuestion1Option2').disabled = true;
+                document.getElementById('easyQuestion1Option3').disabled = true;
+                document.getElementById('easyQuestion1Option4').disabled = true;		
+            }
+
+            function nextQuestion1() {
+                document.getElementById("question1").style.display="none";
+                document.getElementById("question2").style.display="block";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            /* FOR QUESTION 2 */
+            function correctAnswer2() {
+                document.getElementById("notify_correctAnswer2").style.display="block";
+                score++;            
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion2Option1').disabled = true;
+                document.getElementById('easyQuestion2Option2').disabled = true;
+                document.getElementById('easyQuestion2Option3').disabled = true;
+                document.getElementById('easyQuestion2Option4').disabled = true;
+            }
+
+            function wrongAnswer2() {
+                document.getElementById("notify_wrongAnswer2").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion2Option1').disabled = true;
+                document.getElementById('easyQuestion2Option2').disabled = true;
+                document.getElementById('easyQuestion2Option3').disabled = true;
+                document.getElementById('easyQuestion2Option4').disabled = true;
+            }
+
+            function nextQuestion2() {
+                document.getElementById("question2").style.display="none";
+                document.getElementById("question3").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('vid1').pause();
+            }
+
+            /* FOR QUESTION 3 */
+            function correctAnswer3() {
+                document.getElementById("notify_correctAnswer3").style.display="block";
+                score++;    
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion3Option1').disabled = true;
+                document.getElementById('easyQuestion3Option2').disabled = true;
+                document.getElementById('easyQuestion3Option3').disabled = true;
+                document.getElementById('easyQuestion3Option4').disabled = true;
+            }
+
+            function wrongAnswer3() {
+                document.getElementById("notify_wrongAnswer3").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('easyQuestion3Option1').disabled = true;
+                document.getElementById('easyQuestion3Option2').disabled = true;
+                document.getElementById('easyQuestion3Option3').disabled = true;
+                document.getElementById('easyQuestion3Option4').disabled = true;
+            }
+
+            function nextQuestion3() {
+                document.getElementById("question3").style.display="none";
+                document.getElementById("averageRound").style.display="block";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            /* FOR QUESTION 4 */
+            function correctAnswer4() {
+                document.getElementById("notify_correctAnswer4").style.display="block";
+                score = score + 3;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion1Option1').disabled = true;
+                document.getElementById('averageQuestion1Option2').disabled = true;
+                document.getElementById('averageQuestion1Option3').disabled = true;
+                document.getElementById('averageQuestion1Option4').disabled = true;
+            }
+
+            function wrongAnswer4() {
+                document.getElementById("notify_wrongAnswer4").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion1Option1').disabled = true;
+                document.getElementById('averageQuestion1Option2').disabled = true;
+                document.getElementById('averageQuestion1Option3').disabled = true;
+                document.getElementById('averageQuestion1Option4').disabled = true;
+            }
+
+            function nextQuestion4() {
+                document.getElementById("question4").style.display="none";
+                document.getElementById("question5").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('vid2').pause();
+            }
+
+            /* FOR QUESTION 5 */
+            function correctAnswer5() {
+                document.getElementById("notify_correctAnswer5").style.display="block";
+                score = score + 3;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion2Option1').disabled = true;
+                document.getElementById('averageQuestion2Option2').disabled = true;
+                document.getElementById('averageQuestion2Option3').disabled = true;
+                document.getElementById('averageQuestion2Option4').disabled = true;
+            }
+
+            function wrongAnswer5() {
+                document.getElementById("notify_wrongAnswer5").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion2Option1').disabled = true;
+                document.getElementById('averageQuestion2Option2').disabled = true;
+                document.getElementById('averageQuestion2Option3').disabled = true;
+                document.getElementById('averageQuestion2Option4').disabled = true;
+            }
+
+            function nextQuestion5() {
+                document.getElementById("question5").style.display="none";
+                document.getElementById("question6").style.display="block";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            /* FOR QUESTION 6 */
+            function correctAnswer6() {
+                document.getElementById("notify_correctAnswer6").style.display="block";
+                score = score + 3;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion3Option1').disabled = true;
+                document.getElementById('averageQuestion3Option2').disabled = true;
+                document.getElementById('averageQuestion3Option3').disabled = true;
+                document.getElementById('averageQuestion3Option4').disabled = true;
+            }
+
+            function wrongAnswer6() {
+                document.getElementById("notify_wrongAnswer6").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('averageQuestion3Option1').disabled = true;
+                document.getElementById('averageQuestion3Option2').disabled = true;
+                document.getElementById('averageQuestion3Option3').disabled = true;
+                document.getElementById('averageQuestion3Option4').disabled = true;
+            }
+
+            function nextQuestion6() {
+                document.getElementById("question6").style.display="none";
+                document.getElementById("difficultRound").style.display="block";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            /* FOR QUESTION 7 */
+            function correctAnswer7() {
+                document.getElementById("notify_correctAnswer7").style.display="block";
+                score = score + 5;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion1Option1').disabled = true;
+                document.getElementById('hardQuestion1Option2').disabled = true;
+                document.getElementById('hardQuestion1Option3').disabled = true;
+                document.getElementById('hardQuestion1Option4').disabled = true;
+            }
+
+            function wrongAnswer7() {
+                document.getElementById("notify_wrongAnswer7").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion1Option1').disabled = true;
+                document.getElementById('hardQuestion1Option2').disabled = true;
+                document.getElementById('hardQuestion1Option3').disabled = true;
+                document.getElementById('hardQuestion1Option4').disabled = true;
+            }
+
+            function nextQuestion7() {
+                document.getElementById("question7").style.display="none";
+                document.getElementById("question8").style.display="block";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            /* FOR QUESTION 8 */
+            function correctAnswer8() {
+                document.getElementById("notify_correctAnswer8").style.display="block";
+                score = score + 5;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion2Option1').disabled = true;
+                document.getElementById('hardQuestion2Option2').disabled = true;
+                document.getElementById('hardQuestion2Option3').disabled = true;
+                document.getElementById('hardQuestion2Option4').disabled = true;
+            }
+
+            function wrongAnswer8() {
+                document.getElementById("notify_wrongAnswer8").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion2Option1').disabled = true;
+                document.getElementById('hardQuestion2Option2').disabled = true;
+                document.getElementById('hardQuestion2Option3').disabled = true;
+                document.getElementById('hardQuestion2Option4').disabled = true;
+            }
+
+            function nextQuestion8() {
+                document.getElementById("question8").style.display="none";
+                document.getElementById("question9").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('vid3').pause();
+            }
+
+            /* FOR QUESTION 9 */
+            function correctAnswer9() {
+                document.getElementById("notify_correctAnswer9").style.display="block";
+                score = score + 5;
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion3Option1').disabled = true;
+                document.getElementById('hardQuestion3Option2').disabled = true;
+                document.getElementById('hardQuestion3Option3').disabled = true;
+                document.getElementById('hardQuestion3Option4').disabled = true;
+            }
+
+            function wrongAnswer9() {
+                document.getElementById("notify_wrongAnswer9").style.display="block";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('hardQuestion3Option1').disabled = true;
+                document.getElementById('hardQuestion3Option2').disabled = true;
+                document.getElementById('hardQuestion3Option3').disabled = true;
+                document.getElementById('hardQuestion3Option4').disabled = true;
+            }
+
+            function nextQuestion9() {
+                document.getElementById("question9").style.display="none";
+                document.getElementById('score').innerHTML = score;
+            }
+
+            function playvid1() {
+                document.getElementById('vidpic1').style.display="none";
+                document.getElementById('vid1').style.display="block";
+                document.getElementById('vid1').play();
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <div id="easyRound" class="text-center">
+            <div id="question1">
+                <div>
+                    <h1>EASY ROUND: QUESTION 1</h1>
+                    <p>Guess the KDrama based on the following silhouette:</p>
+                    <img src="https://i.pinimg.com/originals/f3/87/8b/f3878b39c79b11f9eebe0159be7cb996.gif" alt="Goblin: The Lonely and Great God" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer1()" class="options" id="easyQuestion1Option1">Hwayugi: A Korean Odyssey</button>
+                    <button type="button" onclick="wrongAnswer1()" class="options" id="easyQuestion1Option2">Moon Lovers: Scarlet Heart Ryeo</button>
+                    <button type="button" onclick="correctAnswer1()" class="options" id="easyQuestion1Option3">Goblin: The Lonely and Great God</button>
+                    <button type="button" onclick="wrongAnswer1()" class="options" id="easyQuestion1Option4">The King: Eternal Monarch</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer1">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion1()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer1">
+                    <p>You got the wrong answer. The correct answer is "Goblin: The Lonely and Great God". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion1()">Next Question →</button>
+                </div>
+            </div>
+        
+            <div id="question2">
+                <div>
+                    <h1>EASY ROUND: QUESTION 2</h1>
+                    <p>Guess the Kdrama based on the following scene:</p>
+                    <img src="/Users/aliyah Qwynzy/Desktop/G9 Computer Science/Project Files/Dr. Romantic Pic.png" alt="thumbnail" class="img-fluid img-thumbnail" id="vidpic1" onclick="playvid1()">
+                    <video type-"video/mp4" src="/Users/aliyah Qwynzy/Desktop/G9 Computer Science/Project Files/Dr. Romantic 2.mp4" alt="Dr. Romantic" class="img-fluid img-thumbnail" id="vid1" controls></video>
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer2()" class="options" id="easyQuestion2Option2">Ghost Doctor</button>
+                    <button type="button" onclick="wrongAnswer2()" class="options" id="easyQuestion2Option3">Hospital Playlist</button>
+                    <button type="button" onclick="wrongAnswer2()" class="options" id="easyQuestion2Option4"> Hospital Ship </button>
+                    <button type="button" onclick="correctAnswer2()" class="options" id="easyQuestion2Option1">Dr. Romantic</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer2">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion2()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer2">
+                    <p>You got the wrong answer. The correct answer is "Dr. Romantic". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion2()">Next Question →</button>
+                </div>
+            </div>
+        
+            <div id="question3">
+                <div>
+                    <h1>EASY ROUND: QUESTION 3</h1>
+                    <p>Guess the KDrama based on the following webtoon character:</p>
+                    <img src="https://brisbooknook.files.wordpress.com/2018/08/true-beauty.png?resize=786%2C1008" alt="True Beauty" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>   
+                    <button type="button" onclick="wrongAnswer3()" class="options" id="easyQuestion3Option1">She Was Pretty</button>
+                    <button type="button" onclick="wrongAnswer3()" class="options" id="easyQuestion3Option2">Oh My Venus</button>
+                    <button type="button" onclick="correctAnswer3()" class="options" id="easyQuestion3Option3">True Beauty</button>
+                    <button type="button" onclick="wrongAnswer3()" class="options" id="easyQuestion3Option4">My ID is Gangnam Beauty</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer3">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion3()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer3">
+                    <p>You got the wrong answer. The correct answer is "True Beauty". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion3()">Next Question →</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="averageRound" class="text-center">
+            <div id="question4">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 1</h1>
+                    <p>Guess the KDrama based on the following scene:</p>
+                    <video type-"video/mp4" src="What's Wrong with Secretary Kim.mp4" alt="What's Wrong with Secretary Kim" class="img-fluid img-thumbnail" id="vid2" controls autoplay></video>
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="correctAnswer4()" class="options" id="averageQuestion1Option4">What's Wrong with Secretary Kim</button>  
+                    <button type="button" onclick="wrongAnswer4()" class="options" id="averageQuestion1Option1">Touch Your Heart</button>
+                    <button type="button" onclick="wrongAnswer4()" class="options" id="averageQuestion1Option2">The Secret Life of My Secretary</button>
+                    <button type="button" onclick="wrongAnswer4()" class="options" id="averageQuestion1Option3">Business Proposal</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer4">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion4()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer4">
+                    <p>You got the wrong answer. The correct answer is "What's Wrong with Secretary Kim". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion4()">Next Question →</button>
+                </div>
+            </div>
+        
+            <div id="question5">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 2</h1>
+                    <p>Guess the Kdrama based on the following silhouette:</p>
+                    <img src="https://64.media.tumblr.com/09f093f569c1c41e25fbb38417d3e56a/814c6701e7ab41ad-63/s540x810/d7092b1a21e2218a08a58dcf59f9f530bce7b8b8.gifv" alt="GirlsGenerationDebutSong" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>  
+                    <button type="button" onclick="wrongAnswer5()" class="options" id="averageQuestion2Option2">Love in the Moonlight</button>
+                    <button type="button" onclick="correctAnswer5()" class="options" id="averageQuestion2Option1">Moon Lovers: Scarlet Heart Ryeo</button>
+                    <button type="button" onclick="wrongAnswer5()" class="options" id="averageQuestion2Option3">River Where the Moon RIses</button>
+                    <button type="button" onclick="wrongAnswer5()" class="options" id="averageQuestion2Option4">Moon Embracing the Sun</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer5">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion5()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer5">
+                    <p>You got the wrong answer. The correct answer is "Moon Lovers: Scarlet Heart Ryeo". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion5()">Next Question →</button>
+                </div>
+            </div>
+
+            <div id="question6">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 3</h1>
+                    <p>Guess the Kdrama based on the following item:</p>
+                    <img src="/Users/aliyah Qwynzy/Desktop/G9 Computer Science/Project Files/Weightifting Fairy Kim Bok Joo.png" alt="Weightlifting Fairy Kim Bok Joo" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer6()" class="options" id="averageQuestion3Option1">My Sassy Girl</button>
+                    <button type="button" onclick="wrongAnswer6()" class="options" id="averageQuestion3Option2">Cheese in the Trap</button>
+                    <button type="button" onclick="correctAnswer6()" class="options" id="averageQuestion3Option3">Weightlifting Fairy Kim Bok Joo</button>
+                    <button type="button" onclick="wrongAnswer6()" class="options" id="averageQuestion3Option4">Welcome to Waikiki</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer6">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion6()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer6">
+                    <p>You got the wrong answer. The correct answer is "Weightlifting Fairy Kim Bok Joo". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion6()">Next Question →</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="difficultRound" class="text-center">
+            <div id="question7">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 1</h1>
+                    <p>Guess the Kdrama based on the silhouette:</p>
+                    <img src="https://i.mydramalist.com/7nJvLf.jpg" alt="SongGIF" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer7()" class="options" id="hardQuestion1Option1">Where Stars Land</button>
+                    <button type="button" onclick="correctAnswer7()" class="options" id="hardQuestion1Option2">While You Were Sleeping</button>
+                    <button type="button" onclick="wrongAnswer7()" class="options" id="hardQuestion1Option3">Crash Landing on You</button>
+                    <button type="button" onclick="wrongAnswer7()" class="options" id="hardQuestion1Option4">When the Weather Is Fine</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer7">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion7()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer7">
+                    <p>You got the wrong answer. The correct answer is "While You Were Sleeping". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion7()">Next Question →</button>
+                </div>
+            </div>
+        
+            <div id="question8">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 2</h1>
+                    <p>Guess the KDrama based on the following scene:</p>
+                    <video type-"video/mp4" src="My Love From the Star.mp4" alt="My Love from the Star" class="img-fluid img-thumbnail" id="vid3" controls autoplay></video>
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer8()" class="options" id="hardQuestion2Option1">Master's Sun</button>
+                    <button type="button" onclick="wrongAnswer8()" class="options" id="hardQuestion2Option2">Love in the Moonlight</button>
+                    <button type="button" onclick="wrongAnswer8()" class="options" id="hardQuestion2Option3">Legend of the Blue Sea</button>
+                    <button type="button" onclick="correctAnswer8()" class="options" id="hardQuestion2Option4">My Love From the Star</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer8">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestion8()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer8">
+                    <p>You got the wrong answer. The correct answer is "My Love From the Star". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion8()">Next Question →</button>
+                </div>
+            </div>
+
+            <div id="question9">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 3</h1>
+                    <p>Guess the KDrama based on the following item:</p>
+                    <img src="https://cdn.shopify.com/s/files/1/0281/7815/3547/products/official-a-korean-odyssey-monkey-doll-k-stuff-shop-22689556889771_800x.jpg?v=1606106636" alt="Hwayugi: A Korean Odyssey" class="img-fluid img-thumbnail">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer9()" class="options" id="hardQuestion3Option1">Rooftop Prince</button>
+                    <button type="button" onclick="wrongAnswer9()" class="options" id="hardQuestion3Option2">The Heirs</button>
+                    <button type="button" onclick="correctAnswer9()" class="options" id="hardQuestion3Option3">Hwayugi: A Korean Odyssey</button>
+                    <button type="button" onclick="wrongAnswer9()" class="options" id="hardQuestion3Option4">Legend of the Blue Sea</button>
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer9">
+                    <p>Great job! You got the correct answer!</p>
+                    <button type="button" onclick="nextQuestioN9()">Next Question →</button>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer9">
+                    <p>You got the wrong answer. The correct answer is "Hwayugi: A Korean Odyssey". Better luck next time!</p>
+                    <button type="button" onclick="nextQuestion9()">Next Question →</button>
+                </div>
+            </div>
+        </div>
+        <br/>
+        <p class="text-center">Score: <span id="score"></span></p>
+        <br/>
+    </body>
+</html>
