@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Patrick+Hand&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+  <title> 3Q Project - HulaHallyu Game </title>
+
+    <script>
+      function openNav() {
+      document.getElementById("mySidebar").style.width = "200px";
+      document.getElementById("main").style.marginLeft = "200px";
+      }
+  
+      function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft= "0";
+      }
+    </script>
+
+    <style>
+    body {
+        width: 100%;
+        background-color: rgb(156, 162, 252);
+        background-color: rgb(199, 242, 243);
+        background-size: cover;
+    }
+
+    .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 234, 113);
+    opacity: 0.98;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    }
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Arima Madurai', cursive;
+        color: rgb(70, 85, 218); 
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: rgb(140, 142, 255); 
+    }
+
+      .sidebar a:active {
+        transform: translateY(3px);
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      font-family: 'Arima Madurai', cursive;
+      cursor: pointer;
+      /* background-color: rgb(245, 204, 255); */
+      background-color: rgb(156, 162, 252);
+      background-color: rgb(199, 242, 243);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 10px;
+    }
+
+    h1 {
+        margin: auto;
+        padding-top: 9px;
+        border-radius: 25px;
+        text-align: center;
+        align-items: center;
+        font-size: 57px; 
+        font-weight: bolder;
+        font-family: 'Arima Madurai', cursive;
+        background-color: rgb(255, 243, 173);
+        box-shadow: 3px 3px 5px rgb(255, 218, 54);
+        color: rgb(243, 89, 141); 
+    }
+
+    .sub {
+        margin: auto;
+        border-radius: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+        box-shadow: 2px 2px 2px rgb(145, 211, 228);  
+        background-color: rgb(255, 115, 157);    
+        color: rgb(255, 255, 255);
+        }
+
+    .container-fluid {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+        display: inline-block;
+    }
+
+    .developers{
+            width: 65%;
+            margin: auto;
+            margin-top: 40px;
+            margin-right: 15px;
+            margin-left: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border-radius: 23px;
+            display:inline-table;
+            color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 5px rgb(218, 131, 180);     
+            background-color: rgb(255, 194, 229);   
+        }
+
+        .pic {
+        width: 350px;
+        margin-top: 30px;
+        margin-bottom: 15px;
+        display: inline-block;
+        }
+
+        .name {
+            font-size: 18px;
+        }
+
+        p {
+        font-family: 'Baloo 2', cursive;
+		color: #5f3bb4;
+		padding: 3px;
+        display: block;
+        text-align: center;
+		font-size: 20px;
+        margin-left: 20px;
+        margin-right: 20px;
+	    }
+
+        code {
+        font-size: 28px;
+        }
+
+    </style>
+    </head>
+
+    <body>
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="index.html">HOME</a>
+            <a href="mechanics.html">MECHANICS</a>
+            <a href="categories.html">PLAY</a>
+            <a href="about.html">ABOUT</a>
+        </div>
+
+        <div id="main">
+            <img class="openbtn" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/277270369_400125631449103_8245141027743103520_n.png?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGmTW3CKgtlY3rSW0AQ8DDSio9H2Luh2juKj0fYu6HaO_STXhR6VhOa-V6YoqIlPFWQwWVWipswTDJ9vO4oBgiA&_nc_ohc=Y8dAtQKsBe4AX9z5wah&_nc_ht=scontent.fmnl4-2.fna&oh=03_AVJ_UgoNe0mWkIcDdDddcXObUb-HIvaQMN2L_1U3iQjnSg&oe=626CD275" onclick="openNav()" width="135" alt="logo">
+        </div>
+        
+        <div class="container-fluid">
+            <h1>MEET THE DEVELOPERS!</h1>
+            <p class="sub" >안녕하세요, 여러분! Annyeonghaseyo! We are...</p>
+
+            <div class="developers">
+                <img class="img-fluid img-thumbnail pic" src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/235367258_4415457658532604_7834163154073559053_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=xWkVAbbm_MAAX-uq-_x&_nc_ht=scontent.fmnl30-2.fna&oh=00_AT_N2hRm_2VdBhjv2WCqu0rn4cTLBN0qKM5GGJpvYjyd4Q&oe=6254A478" alt="angelo">
+            
+                <div class="name"><code>Angelo James P. Dela Rama</code></div>
+                <p>...the one in charge of the K-Pop quiz. I am mostly the one who plans how the game will work. I greatly contributed in making the JavaScript part of the quizzes.</p>
+            </div>
+
+            <div class="developers">
+                <img class="img-fluid img-thumbnail pic" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/240879576_862711721016928_2829509338841750446_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=82AqTKv4ZUoAX_tFuZi&tn=948GnucUWODzlh1p&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT-G8fjv59nPzbzoGUlkn_k68aig4HOS-oXpgbLp61PgLw&oe=625594A9" alt="aliyah">
+            
+                <div class="name"><code>Aliyah Qwynzy E. Medul</code></div>
+                <p>...the one responsible for the K-Drama quiz. I played a part in making the index, mechanics, cheat sheet, and the developers page. I also did some of the parts of Javascript of the game.</p>
+            </div>
+
+            <div class="developers">
+                <img class="img-fluid img-thumbnail pic" src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/229628019_4246043765479321_5004720832422553327_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=wykGqf2_S0gAX-hoQ-u&_nc_ht=scontent.fmnl17-3.fna&oh=00_AT8tblS06xaDDJiMCB-XCkA_i0B_lS9tZz53Epx38Ma_PQ&oe=62551BF0" alt="jace">
+           
+                <div class="name"><code>Althea Jace C. Santiago</code></div>
+                <p>...the designing chief of this game. I am the one who planned and created the looks of this game. I also took part in the making of the index, mechanics, categories, quizzes, and the developers page.</p>
+            </div>
+
+            <div>
+                <p> <br> </p>
+            </div>
+
+            
+            
+<!-- 
+            <div class="angelo">
+                <img class="img-fluid  img-thumbnail pic" src="https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/235367258_4415457658532604_7834163154073559053_n.jpg?_nc_cat=110&ccb=1-5&_nc_sid=174925&_nc_ohc=xWkVAbbm_MAAX-uq-_x&_nc_ht=scontent.fmnl30-2.fna&oh=00_AT_N2hRm_2VdBhjv2WCqu0rn4cTLBN0qKM5GGJpvYjyd4Q&oe=6254A478" alt="angelo">
+            
+                <p class="name">Angelo James P. Dela Rama</p>
+                <p>...the one in charge of the K-Pop quiz. I am mostly the one that plannes how the game will work. I greatly contributed in making the JavaScript part of the quizzes.</p>
+            </div>
+
+            <div class="aliyah">
+                <img class="img-fluid img-thumbnail pic" src="https://scontent.fmnl17-1.fna.fbcdn.net/v/t39.30808-6/240879576_862711721016928_2829509338841750446_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=82AqTKv4ZUoAX_tFuZi&tn=948GnucUWODzlh1p&_nc_ht=scontent.fmnl17-1.fna&oh=00_AT-G8fjv59nPzbzoGUlkn_k68aig4HOS-oXpgbLp61PgLw&oe=625594A9" alt="aliyah">
+            
+                <p class="name">Aliyah Qwynzy E. Medul</p>
+                <p>...the one responsible for the K-Drama quiz. I played a part in making the index, mechanics, cheat sheet, and the developers page. I also did some of the parts of Javascript of the game.</p>
+            </div>
+           
+            <div class="jace">
+                <img class="img-fluid img-thumbnail pic" src="https://scontent.fmnl17-3.fna.fbcdn.net/v/t39.30808-6/229628019_4246043765479321_5004720832422553327_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=wykGqf2_S0gAX-hoQ-u&_nc_ht=scontent.fmnl17-3.fna&oh=00_AT8tblS06xaDDJiMCB-XCkA_i0B_lS9tZz53Epx38Ma_PQ&oe=62551BF0" alt="jace">
+           
+                <p class="name">Althea Jace C. Santiago</p>
+                <p>...the designing chief of this game. I was the one that planned and created the lookss of this game. I took part in the making of the index, mechanics, categories, quizzes, and the developers page.</p>
+            </div> -->
+           
+
+        </div>
+
+    </body>
+
+</html>
