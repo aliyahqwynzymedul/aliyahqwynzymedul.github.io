@@ -1,0 +1,923 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <title> 3Q Project - HulaHallyu Game </title>
+
+    <script>
+        function openNav() {
+        document.getElementById("mySidebar").style.width = "200px";
+        document.getElementById("main").style.marginLeft = "200px";
+        }
+    
+        function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+        }
+
+        var score = 0;
+
+/* FOR QUESTION 1 */
+function correctAnswer1() {
+    document.getElementById("notify_correctAnswer1").style.display="block";
+    score++;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion1Option1').disabled = true;
+    document.getElementById('easyQuestion1Option2').disabled = true;
+    document.getElementById('easyQuestion1Option3').disabled = true;
+    document.getElementById('easyQuestion1Option4').disabled = true;
+}
+
+function wrongAnswer1() {
+    document.getElementById("notify_wrongAnswer1").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion1Option1').disabled = true;
+    document.getElementById('easyQuestion1Option2').disabled = true;
+    document.getElementById('easyQuestion1Option3').disabled = true;
+    document.getElementById('easyQuestion1Option4').disabled = true;		
+}
+
+function nextQuestion1() {
+    document.getElementById("question1").style.display="none";
+    document.getElementById("question2").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 2 */
+function correctAnswer2() {
+    document.getElementById("notify_correctAnswer2").style.display="block";
+    score++;            
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion2Option1').disabled = true;
+    document.getElementById('easyQuestion2Option2').disabled = true;
+    document.getElementById('easyQuestion2Option3').disabled = true;
+    document.getElementById('easyQuestion2Option4').disabled = true;
+}
+
+function wrongAnswer2() {
+    document.getElementById("notify_wrongAnswer2").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion2Option1').disabled = true;
+    document.getElementById('easyQuestion2Option2').disabled = true;
+    document.getElementById('easyQuestion2Option3').disabled = true;
+    document.getElementById('easyQuestion2Option4').disabled = true;
+}
+
+function nextQuestion2() {
+    document.getElementById("question2").style.display="none";
+    document.getElementById("question3").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 3 */
+function correctAnswer3() {
+    document.getElementById("notify_correctAnswer3").style.display="block";
+    score++;    
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion3Option1').disabled = true;
+    document.getElementById('easyQuestion3Option2').disabled = true;
+    document.getElementById('easyQuestion3Option3').disabled = true;
+    document.getElementById('easyQuestion3Option4').disabled = true;
+}
+
+function wrongAnswer3() {
+    document.getElementById("notify_wrongAnswer3").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('easyQuestion3Option1').disabled = true;
+    document.getElementById('easyQuestion3Option2').disabled = true;
+    document.getElementById('easyQuestion3Option3').disabled = true;
+    document.getElementById('easyQuestion3Option4').disabled = true;
+}
+
+function nextQuestion3() {
+    document.getElementById("question3").style.display="none";
+    document.getElementById("averageRound").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 4 */
+function correctAnswer4() {
+    document.getElementById("notify_correctAnswer4").style.display="block";
+    score = score + 3;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion1Option1').disabled = true;
+    document.getElementById('averageQuestion1Option2').disabled = true;
+    document.getElementById('averageQuestion1Option3').disabled = true;
+    document.getElementById('averageQuestion1Option4').disabled = true;
+}
+
+function wrongAnswer4() {
+    document.getElementById("notify_wrongAnswer4").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion1Option1').disabled = true;
+    document.getElementById('averageQuestion1Option2').disabled = true;
+    document.getElementById('averageQuestion1Option3').disabled = true;
+    document.getElementById('averageQuestion1Option4').disabled = true;
+}
+
+function nextQuestion4() {
+    document.getElementById("question4").style.display="none";
+    document.getElementById("question5").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 5 */
+function correctAnswer5() {
+    document.getElementById("notify_correctAnswer5").style.display="block";
+    score = score + 3;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion2Option1').disabled = true;
+    document.getElementById('averageQuestion2Option2').disabled = true;
+    document.getElementById('averageQuestion2Option3').disabled = true;
+    document.getElementById('averageQuestion2Option4').disabled = true;
+}
+
+function wrongAnswer5() {
+    document.getElementById("notify_wrongAnswer5").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion2Option1').disabled = true;
+    document.getElementById('averageQuestion2Option2').disabled = true;
+    document.getElementById('averageQuestion2Option3').disabled = true;
+    document.getElementById('averageQuestion2Option4').disabled = true;
+}
+
+function nextQuestion5() {
+    document.getElementById("question5").style.display="none";
+    document.getElementById("question6").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 6 */
+function correctAnswer6() {
+    document.getElementById("notify_correctAnswer6").style.display="block";
+    score = score + 3;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion3Option1').disabled = true;
+    document.getElementById('averageQuestion3Option2').disabled = true;
+    document.getElementById('averageQuestion3Option3').disabled = true;
+    document.getElementById('averageQuestion3Option4').disabled = true;
+}
+
+function wrongAnswer6() {
+    document.getElementById("notify_wrongAnswer6").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('averageQuestion3Option1').disabled = true;
+    document.getElementById('averageQuestion3Option2').disabled = true;
+    document.getElementById('averageQuestion3Option3').disabled = true;
+    document.getElementById('averageQuestion3Option4').disabled = true;
+}
+
+function nextQuestion6() {
+    document.getElementById("question6").style.display="none";
+    document.getElementById("difficultRound").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 7 */
+function correctAnswer7() {
+    document.getElementById("notify_correctAnswer7").style.display="block";
+    score = score + 5;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion1Option1').disabled = true;
+    document.getElementById('hardQuestion1Option2').disabled = true;
+    document.getElementById('hardQuestion1Option3').disabled = true;
+    document.getElementById('hardQuestion1Option4').disabled = true;
+}
+
+function wrongAnswer7() {
+    document.getElementById("notify_wrongAnswer7").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion1Option1').disabled = true;
+    document.getElementById('hardQuestion1Option2').disabled = true;
+    document.getElementById('hardQuestion1Option3').disabled = true;
+    document.getElementById('hardQuestion1Option4').disabled = true;
+}
+
+function nextQuestion7() {
+    document.getElementById("question7").style.display="none";
+    document.getElementById("question8").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 8 */
+function correctAnswer8() {
+    document.getElementById("notify_correctAnswer8").style.display="block";
+    score = score + 5;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion2Option1').disabled = true;
+    document.getElementById('hardQuestion2Option2').disabled = true;
+    document.getElementById('hardQuestion2Option3').disabled = true;
+    document.getElementById('hardQuestion2Option4').disabled = true;
+}
+
+function wrongAnswer8() {
+    document.getElementById("notify_wrongAnswer8").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion2Option1').disabled = true;
+    document.getElementById('hardQuestion2Option2').disabled = true;
+    document.getElementById('hardQuestion2Option3').disabled = true;
+    document.getElementById('hardQuestion2Option4').disabled = true;
+}
+
+function nextQuestion8() {
+    document.getElementById("question8").style.display="none";
+    document.getElementById("question9").style.display="block";
+    document.getElementById('score').innerHTML = score;
+}
+
+/* FOR QUESTION 9 */
+function correctAnswer9() {
+    document.getElementById("notify_correctAnswer9").style.display="block";
+    score = score + 5;
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion3Option1').disabled = true;
+    document.getElementById('hardQuestion3Option2').disabled = true;
+    document.getElementById('hardQuestion3Option3').disabled = true;
+    document.getElementById('hardQuestion3Option4').disabled = true;
+}
+
+function wrongAnswer9() {
+    document.getElementById("notify_wrongAnswer9").style.display="block";
+    document.getElementById('score').innerHTML = score;
+    document.getElementById('hardQuestion3Option1').disabled = true;
+    document.getElementById('hardQuestion3Option2').disabled = true;
+    document.getElementById('hardQuestion3Option3').disabled = true;
+    document.getElementById('hardQuestion3Option4').disabled = true;
+}
+
+function nextQuestion9() {
+                document.getElementById("question9").style.display="none";
+                document.getElementById('score').innerHTML = score;
+                document.getElementById('finalScore').innerHTML = score;
+                document.getElementById('lastPart').style.display="inline";
+                document.getElementById('divscore').style.display="none";
+            }
+
+            function playvid1() {
+                document.getElementById('vidpic1').style.display="none";
+                document.getElementById('vid1').style.display="block";
+                document.getElementById('vid1').play();
+            }
+    </script>
+
+
+<style>
+    .startBtn  {
+            padding-left: 16px;
+            padding-right: 13px;
+            margin: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+            font-size: 28px;
+            font-weight: bolder;
+            /* font-family: 'Arima Madurai', cursive; */
+            font-family: 'Baloo 2', cursive;
+            text-transform: uppercase; 
+            text-decoration: none;
+            border-radius: 23px;
+            color: rgb(255, 255, 255);
+            box-shadow: 2px 2px 2px rgb(204, 14, 122);     
+            background-color: rgb(201, 49, 138);
+            text-align: center;
+            align-items: center;
+        }
+        .startBtn:hover{
+            box-shadow: 2px 2px 2px rgb(216, 120, 120);
+            background-color: rgb(255, 122, 122);
+            color: rgb(255, 255, 255);
+        }
+        .startBtn:active {
+            box-shadow: 2px 2px 2px rgb(216, 120, 120);
+            background-color: rgb(255, 122, 122);
+            transform: translateY(2px);
+        }
+
+    /* FOR QUESTION 1 */
+    #question1 {
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: bolder;
+    }
+    
+    #notify_correctAnswer1 {
+        display: none;
+    }
+
+    #notify_wrongAnswer1 {
+        display: none;
+    }
+
+    /* FOR QUESTION 2 */
+    #question2 {
+        display: none;
+        font-family: 'Maven Pro', sans-serif;
+        font-weight: bolder;
+    }
+    
+    #notify_correctAnswer2 {
+        display: none;
+    }
+
+    #notify_wrongAnswer2 {
+        display: none;
+    }
+
+    /* FOR QUESTION 3 */
+    #question3 {
+        display: none;
+    }
+    
+    #notify_correctAnswer3 {
+        display: none;
+    }
+
+    #notify_wrongAnswer3 {
+        display: none;
+    }
+
+    /* FOR QUESTION 4 */
+    #averageRound {
+        display: none;
+    }
+    
+    #notify_correctAnswer4 {
+        display: none;
+    }
+
+    #notify_wrongAnswer4 {
+        display: none;
+    }
+
+    /* FOR QUESTION 5 */
+    #question5 {
+        display: none;
+    }
+    
+    #notify_correctAnswer5 {
+        display: none;
+    }
+
+    #notify_wrongAnswer5 {
+        display: none;
+    }
+
+    /* FOR QUESTION 6 */
+    #question6 {
+        display: none;
+    }
+    
+    #notify_correctAnswer6 {
+        display: none;
+    }
+
+    #notify_wrongAnswer6 {
+        display: none;
+    }
+
+    /* FOR QUESTION 7 */
+    #difficultRound {
+        display: none;
+    }
+    
+    #notify_correctAnswer7 {
+        display: none;
+    }
+
+    #notify_wrongAnswer7 {
+        display: none;
+    }
+
+    /* FOR QUESTION 8 */
+    #question8 {
+        display: none;
+    }
+    
+    #notify_correctAnswer8 {
+        display: none;
+    }
+
+    #notify_wrongAnswer8 {
+        display: none;
+    }
+
+    /* FOR QUESTION 9 */
+    #question9 {
+        display: none;
+    }
+    
+    #notify_correctAnswer9 {
+        display: none;
+    }
+
+    #notify_wrongAnswer9 {
+        display: none;
+    }
+
+    body {
+    width: 100%;
+    /* background-color: rgb(245, 204, 255); */
+    background-color: rgb(156, 162, 252);
+    background-color: rgb(199, 242, 243);
+    background-size: cover;
+  }
+
+    .container-fluid {
+        width: 100%;
+        margin: auto;
+        text-align: center;
+        align-items: center;
+        position: absolute;
+    }
+
+    .sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(255, 234, 113);
+    opacity: 0.98;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+    .sidebar a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Arima Madurai', cursive;
+        color: rgb(70, 85, 218); 
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: rgb(140, 142, 255); 
+    }
+
+      .sidebar a:active {
+        transform: translateY(3px);
+    }
+
+    .sidebar .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    .openbtn {
+      font-size: 20px;
+      font-family: 'Arima Madurai', cursive;
+      cursor: pointer;
+      /* background-color: rgb(245, 204, 255); */
+      background-color: rgb(156, 162, 252);
+      background-color: rgb(199, 242, 243);
+      color: white;
+      padding: 10px 15px;
+      border: none;
+    }
+
+    #main {
+      transition: margin-left .5s;
+      padding: 10px;
+    }
+
+    .options {
+        font-family: 'Maven Pro', sans-serif;
+    }
+
+    .nextBtn  {
+            margin-bottom: 30px;
+            margin-left: 10px;
+            font-size: 22px;
+            font-family: 'Baloo 2', cursive;
+            text-transform: uppercase; 
+            text-decoration: none;
+            border-radius: 13px;
+            color: rgb(255, 255, 255);
+            background-color: rgb(126, 118, 131); 
+    }
+
+    .nextBtn:hover{
+        background-color:  rgb(87, 73, 92);      
+        color: rgb(255, 255, 255);
+    }
+
+    .nextBtn:active {
+        background-color: rgb(92, 87, 88); 
+        transform: translateY(2px);
+    }
+
+    .options {
+            /* height: 55px;
+	        width: 200px; */
+            padding-left: 20px;
+            padding-right: 20px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+            font-size: 28px;
+            font-family: 'Baloo 2', cursive;
+            text-decoration: none;
+            border-radius: 23px;
+            color: rgb(255, 255, 255);  
+            box-shadow: 2px 2px 2px rgb(197, 32, 189);   
+            background-color: rgb(243, 117, 212);    
+        
+    }
+
+    .options:hover{
+        background-color: rgb(230, 45, 183);   
+        color: rgb(255, 255, 255);
+    }
+
+    .options:active {
+        background-color: rgb(230, 45, 183); 
+        transform: translateY(3px);
+    }
+
+    h1 {
+        margin: auto;
+        padding-top: 9px;
+        border-radius: 25px;
+        text-align: center;
+        align-items: center;
+        font-size: 57px; 
+        font-weight: bolder;
+        font-family: 'Arima Madurai', cursive;
+        background-color: rgb(255, 243, 173);
+        box-shadow: 3px 3px 5px rgb(255, 218, 54);
+        color: rgb(243, 89, 141); 
+        /* background-color: rgb(255, 184, 151);
+        background-color: rgb(255, 243, 173);
+        box-shadow: 3px 3px 5px rgb(255, 218, 54);
+        color: rgb(243, 89, 141);  
+        color: rgb(255, 184, 151);*/
+    }
+
+    p {
+        font-family: 'Baloo 2', cursive;
+		color: #5f3bb4;
+		padding: 3px;
+        display: block;
+        text-align: center;
+		font-size: 23px;
+	}
+
+    .quest{
+        margin: auto;
+        border-radius: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+        /* box-shadow: 2px 2px 2px rgb(228, 145, 192);  
+        background-color: rgb(255, 142, 230);    */
+        background-color: rgb(156, 162, 252);
+        box-shadow: 3px 3px 5px rgb(92, 103, 255);
+        color: rgb(255, 255, 255);
+        }
+    
+
+    .picQuest {
+        width: 35%;
+        border-radius: 23px;
+        margin-top: 25px;
+    }
+
+    .questVid {
+        margin-top: 35px;
+    }
+
+    .scoreBox  {
+        max-width: max-content;
+        margin: auto;
+        margin-bottom: 80px;
+        border-radius: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 30px;
+    }
+
+    .score {
+        color: rgb(160, 42, 115);
+    }
+
+
+</style>
+</head>
+
+  <body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <a href="index.html">HOME</a>
+        <a href="mechanics.html">MECHANICS</a>
+        <a href="categories.html">PLAY</a>
+        <a href="about.html">ABOUT</a>
+    </div>
+  
+    <div id="main">
+        <img class="openbtn" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/277270369_400125631449103_8245141027743103520_n.png?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGmTW3CKgtlY3rSW0AQ8DDSio9H2Luh2juKj0fYu6HaO_STXhR6VhOa-V6YoqIlPFWQwWVWipswTDJ9vO4oBgiA&_nc_ohc=Y8dAtQKsBe4AX9z5wah&_nc_ht=scontent.fmnl4-2.fna&oh=03_AVJ_UgoNe0mWkIcDdDddcXObUb-HIvaQMN2L_1U3iQjnSg&oe=626CD275" onclick="openNav()" width="135" alt="logo">
+    </div>
+    
+    <div class="container-fluid">
+        <div id="easyRound" class="text-center">
+            <div id="question1">
+                <div>
+                    <h1>EASY ROUND: QUESTION 1</h1>
+                    <p class ="quest">Which of the following K-pop boy groups released a song entitled "Butter"?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://www.cnet.com/a/img/jZtW1WQrvLx5rj6_jm_tfgHk_Ig=/2021/04/28/f9098706-0ad3-4503-b078-0093e721a960/btsbutter.jpg" alt="Butter">
+                    <br/>
+                    <br/>
+
+                    <button type="button" onclick="wrongAnswer1()" class="options btn" id="easyQuestion1Option1">EXO</button>
+                    <button type="button" onclick="wrongAnswer1()" class="options btn" id="easyQuestion1Option2">Seventeen</button>
+                    <button type="button" onclick="correctAnswer1()" class="options btn" id="easyQuestion1Option3">BTS</button>
+                    <button type="button" onclick="wrongAnswer1()" class="options btn" id="easyQuestion1Option4">NCT 127</button>
+
+                    <!-- <div class="options btn" onclick="wrongAnswer1()" id="easyQuestion1Option1" > EXO </div>
+                    <div class="options btn" onclick="wrongAnswer1()" id="easyQuestion1Option2" > Seventeen </div>
+                    <div class="options btn" onclick="correctAnswer1()" id="easyQuestion1Option3" > BTS </div>
+                    <div class="options btn" onclick="wrongAnswer1()" id="easyQuestion1Option4" > NCT 127 </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer1">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion1()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer1">
+                    <p>You got the wrong answer. The correct answer is "BTS". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion1()" > Next Question </div>
+                </div>
+            </div>
+        
+            <div id="question2">
+                <div>
+                    <h1>EASY ROUND: QUESTION 2</h1>
+                    <p class ="quest">What is the official fandom name of Blackpink?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://v-phinf.pstatic.net/20210701_286/1625077189231Fiyjf_GIF/EthicalGreenAfricanaugurbuzzard-max-1mb.gif?type=w1000" alt="Blackpink">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="correctAnswer2()" class="options btn" id="easyQuestion2Option1">Blink</button>
+                    <button type="button" onclick="wrongAnswer2()" class="options btn" id="easyQuestion2Option2">Once</button>
+                    <button type="button" onclick="wrongAnswer2()" class="options btn" id="easyQuestion2Option3">ReVeluv</button>
+                    <button type="button" onclick="wrongAnswer2()" class="options btn" id="easyQuestion2Option4">MY</button>
+
+                    <!-- <div class="options btn" onclick="correctAnswer2()" id="easyQuestion2Option1" > Blink </div>
+                    <div class="options btn" onclick="wrongAnswer2()" id="easyQuestion2Option2" > Once </div>
+                    <div class="options btn" onclick="wrongAnswer2()" id="easyQuestion2Option3" > ReVeluv </div>
+                    <div class="options btn" onclick="wrongAnswer2()" id="easyQuestion2Option4" > MY </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer2">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion2()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer2">
+                    <p>You got the wrong answer. The correct answer is "Blink". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion2()" > Next Question </div>
+                </div>
+            </div>
+        
+            <div id="question3">
+                <div>
+                    <h1>EASY ROUND: QUESTION 3</h1>
+                    <p class ="quest">How many members does Twice have?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://64.media.tumblr.com/8fda29d917e30dea96cf462dde94075a/f4488650a7e8e09f-1d/s500x750/787a84a202dab483721404be6b5af1d2c71c6b0a.gifv" alt="TwiceOT9" >
+                    <br/>
+                    <br/>   
+
+                    <button type="button" onclick="wrongAnswer3()" class="options btn" id="easyQuestion3Option1">Seven (7)</button>
+                    <button type="button" onclick="wrongAnswer3()" class="options btn" id="easyQuestion3Option2">Eight (8)</button>
+                    <button type="button" onclick="correctAnswer3()" class="options btn" id="easyQuestion3Option3">Nine (9)</button>
+                    <button type="button" onclick="wrongAnswer3()" class="options btn" id="easyQuestion3Option4">Ten (10)</button>
+
+                   <!--  <div class="options btn" onclick="wrongAnswer3()" id="easyQuestion3Option1" > Seven (7) </div>
+                    <div class="options btn" onclick="wrongAnswer3()" id="easyQuestion3Option2" > Eight (8) </div>
+                    <div class="options btn" onclick="correctAnswer3()" id="easyQuestion3Option3" > Nine (9) </div>
+                    <div class="options btn" onclick="wrongAnswer3()" id="easyQuestion3Option4" > Ten (10) </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer3">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion3()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer3">
+                    <p>You got the wrong answer. The correct answer is "Nine (9)". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion3()" > Next Question </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="averageRound" class="text-center">
+            <div id="question4">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 1</h1>
+                    <p class ="quest">When did EXO had their official debut?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/339d8eae-e7df-4d63-a726-75f9279982f1/d4vhw9d-86bd7198-2711-42f0-8e34-9cbdd45d3ac4.gif?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzMzOWQ4ZWFlLWU3ZGYtNGQ2My1hNzI2LTc1ZjkyNzk5ODJmMVwvZDR2aHc5ZC04NmJkNzE5OC0yNzExLTQyZjAtOGUzNC05Y2JkZDQ1ZDNhYzQuZ2lmIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.Qn_4UtNJPbYZvjRO9bn0M9W91c_q_zPeEdtnFfxt43o" alt="EXODebut">
+                    <br/>
+                    <br/>  
+
+                    <button type="button" onclick="wrongAnswer4()" class="options btn" id="averageQuestion1Option1">April 5, 2012</button>
+                    <button type="button" onclick="wrongAnswer4()" class="options btn" id="averageQuestion1Option2">April 6, 2012</button>
+                    <button type="button" onclick="wrongAnswer4()" class="options btn" id="averageQuestion1Option3">April 7, 2012</button>
+                    <button type="button" onclick="correctAnswer4()" class="options btn" id="averageQuestion1Option4">April 8, 2012</button>
+
+                   <!--  <div class="options btn" onclick="wrongAnswer4()" id="averageQuestion1Option1" > April 5, 2012 </div>
+                    <div class="options btn" onclick="wrongAnswer4()" id="averageQuestion1Option2" > April 6, 2012 </div>
+                    <div class="options btn" onclick="wrongAnswer4()" id="averageQuestion1Option3" > April 7, 2012 </div>
+                    <div class="options btn" onclick="correctAnswer4()" id="averageQuestion1Option4" > April 8, 2012 </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer4">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion4()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer4">
+                    <p>You got the wrong answer. The correct answer is "April 8, 2012". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion4()" > Next Question </div>
+                </div>
+            </div>
+        
+            <div id="question5">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 2</h1>
+                    <p class ="quest">What is the debut song of Girl's Generation?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://c.tenor.com/zrDUrk1KxPQAAAAC/snsd-girlsgeneration.gif" alt="GirlsGenerationDebutSong">
+                    <br/>
+                    <br/>  
+                    <button type="button" onclick="correctAnswer5()" class="options btn" id="averageQuestion2Option1">Into the New World</button>
+                    <button type="button" onclick="wrongAnswer5()" class="options btn" id="averageQuestion2Option2">Gee</button>
+                    <button type="button" onclick="wrongAnswer5()" class="options btn" id="averageQuestion2Option3">Lion Heart</button>
+                    <button type="button" onclick="wrongAnswer5()" class="options btn" id="averageQuestion2Option4">Oh!</button>
+
+                   <!--  <div class="options btn" onclick="correctAnswer5()" id="averageQuestion2Option1" > Into the New World </div>
+                    <div class="options btn" onclick="wrongAnswer5()" id="averageQuestion2Option2" > Gee </div>
+                    <div class="options btn" onclick="wrongAnswer5()" id="averageQuestion2Option3" > Lion Heart </div>
+                    <div class="options btn" onclick="wrongAnswer5()" id="averageQuestion2Option4" > Oh! </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer5">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion5()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer5">
+                    <p>You got the wrong answer. The correct answer is "Into the New World". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion5()" > Next Question </div>
+                </div>
+            </div>
+    
+            <div id="question6">
+                <div>
+                    <h1>AVERAGE ROUND: QUESTION 3</h1>
+                    <p class ="quest">Who is the oldest female K-pop soloist as of April 7, 2022?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://6.vikiplatform.com/image/f62a49c23a7c4728a9348ef147537656.jpg?x=b&a=0x0&s=460x268&e=t&f=t&cb=1" alt="OldestSoloist">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer6()" class="options btn" id="averageQuestion3Option1">Choi Sung-hee</button>
+                    <button type="button" onclick="wrongAnswer6()" class="options btn" id="averageQuestion3Option2">Lee Hyori</button>
+                    <button type="button" onclick="correctAnswer6()" class="options btn" id="averageQuestion3Option3">Uhm Jung Hwa</button>
+                    <button type="button" onclick="wrongAnswer6()" class="options btn" id="averageQuestion3Option4">Lee Ji-eun</button>
+
+                   <!--  <div class="options btn" onclick="wrongAnswer6()" id="averageQuestion3Option1" > Choi Sung-hee </div>
+                    <div class="options btn" onclick="wrongAnswer6()" id="averageQuestion3Option2" > Lee Hyori  </div>
+                    <div class="options btn" onclick="correctAnswer6()" id="averageQuestion3Option3" > Uhm Jung Hwa </div>
+                    <div class="options btn" onclick="wrongAnswer6()" id="averageQuestion3Option4" > Lee Ji-eun </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer6">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion6()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer6">
+                    <p>You got the wrong answer. The correct answer is "Uhm Jung Hwa". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion6()" > Next Question </div>
+                </div>
+            </div>
+        </div>
+    
+        <div id="difficultRound" class="text-center">
+            <div id="question7">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 1</h1>
+                    <p class ="quest">What is the title of the song based on the GIF from its MV below?</p>
+                    <img class ="img-fluid img-thumbnail picQuest"  src="https://78.media.tumblr.com/3b68c188cb5f580c45e3b6c8ac3d5c00/tumblr_p57vjxSOdx1urm8qjo6_500.gif" alt="SongGIF">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer7()" class="options btn" id="hardQuestion1Option1">2NE1 - Falling In Love</button>
+                    <button type="button" onclick="correctAnswer7()" class="options btn" id="hardQuestion1Option2">MAMAMOO - Starry Night</button>
+                    <button type="button" onclick="wrongAnswer7()" class="options btn" id="hardQuestion1Option3">Brave Girls - Chi Mat Ba Ram</button>
+                    <button type="button" onclick="wrongAnswer7()" class="options btn" id="hardQuestion1Option4">Twice - Dance the Night Away</button>
+
+                    <!-- <div class="options btn" onclick="wrongAnswer7()" id="hardQuestion1Option1" > 2NE1 - Falling In Love  </div>
+                    <div class="options btn" onclick="correctAnswer7()" id="hardQuestion1Option2" > MAMAMOO - Starry Night </div>
+                    <div class="options btn" onclick="wrongAnswer7()" id="hardQuestion1Option3" > Brave Girls - Chi Mat Ba Ram </div>
+                    <div class="options btn" onclick="wrongAnswer7()" id="hardQuestion1Option4" > Twice - Dance the Night Away </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer7">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion7()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer7">
+                    <p>You got the wrong answer. The correct answer is "MAMAMOO - Starry Night". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion7()" > Next Question </div>
+                </div>
+            </div>
+        
+            <div id="question8">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 2</h1>
+                    <p class ="quest">What is the most common title used by K-pop artists as of September 4, 2021?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://www.sbs.com.au/popasia/sites/sbs.com.au.popasia/files/suhoconfused.gif" alt="SongGIF">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer8()" class="options btn" id="hardQuestion2Option1">Runaway</button>
+                    <button type="button" onclick="wrongAnswer8()" class="options btn" id="hardQuestion2Option2">Destiny</button>
+                    <button type="button" onclick="wrongAnswer8()" class="options btn" id="hardQuestion2Option3">Beautiful</button>
+                    <button type="button" onclick="correctAnswer8()" class="options btn" id="hardQuestion2Option4">Paradise</button>
+
+                    <!-- <div class="options btn" onclick="wrongAnswer8()" id="hardQuestion1Option1" > Runaway  </div>
+                    <div class="options btn" onclick="wrongAnswer8()" id="hardQuestion1Option2" > Destiny </div>
+                    <div class="options btn" onclick="wrongAnswer8()" id="hardQuestion1Option3" > Beautiful </div>
+                    <div class="options btn" onclick="correctAnswer8()" id="hardQuestion1Option4" > Paradise </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer8">
+                    <p> Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion8()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer8">
+                    <p>You got the wrong answer. The correct answer is "Paradise". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion8()" > Next Question </div>
+                </div>
+            </div>
+    
+            <div id="question9">
+                <div>
+                    <h1>DIFFICULT ROUND: QUESTION 3</h1>
+                    <p class ="quest">How many times did Red Velvet mention the word "Rookie" in their song entitled Rookie?</p>
+                    <img class ="img-fluid img-thumbnail picQuest" src="https://pa1.narvii.com/6360/07efb97b0908c824fdb8b03dc94c8139c1e63c0f_hq.gif" alt="Red Velvet Rookie GIF">
+                    <br/>
+                    <br/>
+                    <button type="button" onclick="wrongAnswer9()" class="options btn" id="hardQuestion3Option1">58</button>
+                    <button type="button" onclick="wrongAnswer9()" class="options btn" id="hardQuestion3Option2">62</button>
+                    <button type="button" onclick="correctAnswer9()" class="options btn" id="hardQuestion3Option3">66</button>
+                    <button type="button" onclick="wrongAnswer9()" class="options btn" id="hardQuestion3Option4">70</button>
+
+                    <!-- <div class="options btn" onclick="wrongAnswer9()" id="hardQuestion3Option1" > 58  </div>
+                    <div class="options btn" onclick="wrongAnswer9()" id="hardQuestion3Option2" > 62 </div>
+                    <div class="options btn" onclick="correctAnswer9()" id="hardQuestion3Option3" > 66 </div>
+                    <div class="options btn" onclick="wrongAnswer9()" id="hardQuestion3Option4" > 70 </div> -->
+                </div>
+        
+                <div class="correctAnswer" id="notify_correctAnswer9">
+                    <p>Great job! You got the correct answer!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion9()" > Next Question </div>
+                </div>
+            
+                <div class="wrongAnswer" id="notify_wrongAnswer9">
+                    <p>You got the wrong answer. The correct answer is "66". Better luck next time!</p>
+                    <div class="nextBtn btn" onclick="nextQuestion9()" > Next Question </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container scoreBox" id="divscore">
+            <p class="score" >Score: <span id="score"></span></p>
+        </div>
+    </div>
+
+    <div id="lastPart" style="display: none;">
+        <h1>Your Final Score:<br><span id="finalScore"></span><span>/27</span><br><br><span><a class="startBtn btn" href="categories.html">Play Again?</a></span><br><span><a class="startBtn btn" href="about.html">Continue to Meet the Team!! →</a></span></h1>
+    </div>
+    
+  </body>
+</html>
