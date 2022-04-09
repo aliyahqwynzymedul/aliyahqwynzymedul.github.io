@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai&family=Patrick+Hand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+2&display=swap" rel="stylesheet">
+
+    <title> 3Q Project - HulaHallyu Game </title>
+
+    <style>
+      body {
+        width: 100%;
+        background-color: rgb(199, 242, 243);
+        background-size: cover;
+      }
+
+      .container-fluid {
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            align-items: center;
+            position: absolute;
+        }
+      .sidebar {
+		    height: 100%;
+		    width: 0;
+		    position: fixed;
+		    z-index: 1;
+		    top: 0;
+		    left: 0;
+        /* background-color: rgb(169, 170, 247);  */
+        /* background-color: rgb(255, 181, 181);  */
+        background-color: rgb(255, 234, 113);
+        opacity: 0.98;
+		    overflow-x: hidden;
+		    transition: 0.5s;
+		    padding-top: 60px;
+		}
+
+		.sidebar a {
+		  padding: 8px 8px 8px 32px;
+		  text-decoration: none;
+		  font-size: 25px;
+      font-weight: bolder;
+      font-family: 'Arima Madurai', cursive;
+      color: rgb(70, 85, 218); 
+		  display: block;
+		  transition: 0.3s;
+		}
+
+		.sidebar a:hover {
+      color: rgb(140, 142, 255); 
+		}
+
+  	.sidebar a:active {
+      transform: translateY(3px);
+    }
+
+		.sidebar .closebtn {
+		  position: absolute;
+		  top: 0;
+		  right: 25px;
+		  font-size: 36px;
+		  margin-left: 50px;
+		}
+
+		.openbtn {
+		  font-size: 20px;
+		  cursor: pointer;
+		  background-color: rgb(199, 242, 243);
+		  color: white;
+		  padding: 10px 15px;
+		  border: none;
+		}
+
+		#main {
+		  transition: margin-left .5s;
+		  padding: 10px;
+		}
+
+		/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 15px;}
+		  .sidebar a {font-size: 18px;}
+		}
+		
+		.col{
+      max-width: 90%;
+      text-align: center;
+      padding-top: 15px;
+      margin: auto;
+			margin-top: 3px;
+			margin-bottom: 30px;
+      border-radius: 30px;
+      box-shadow: 3px 3px 5px rgb(255, 218, 54);
+      background-color: rgb(255, 242, 167);
+		}
+		
+		h3, h4, h5 {
+      font-family: 'Arima Madurai', cursive;
+      color: rgb(228, 53, 111); 
+			padding-top: 8px;
+      font-size: 28px;
+      font-weight: bolder;
+		}
+
+    h5 {
+      margin-bottom: 20px;
+    }
+    
+		h6, p{
+      font-family: 'Baloo 2', cursive;
+			color: #3b59b4;
+			padding: 3px;
+			font-size: 20px;
+		}
+
+    code {
+      font-family: 'Arima Madurai', cursive;
+      padding: 2px;
+      color: rgb(218, 69, 119); 
+      font-size: 105%;
+      font-weight: bold;
+    }
+
+    .startBtn  {
+      height: 55px;
+	    width: 200px;
+      margin-bottom: 40px;
+      font-size: 28px;
+      font-weight: bolder;
+      /* font-family: 'Arima Madurai', cursive; */
+      font-family: 'Baloo 2', cursive;
+      text-transform: uppercase; 
+      text-decoration: none;
+      border-radius: 23px;
+      color: rgb(255, 255, 255);
+      box-shadow: 2px 2px 2px rgb(204, 14, 122);    
+      background-color: rgb(201, 49, 138);    
+    }
+    
+    .startBtn:hover{
+      box-shadow: 2px 2px 2px rgb(216, 120, 120);
+      background-color: rgb(255, 122, 122);
+      color: rgb(255, 255, 255);
+    }
+  
+    .startBtn:active {
+      box-shadow: 2px 2px 2px rgb(216, 120, 120);
+      background-color: rgb(255, 122, 122);
+      transform: translateY(2px);
+    }
+
+    .instructions {
+      margin-left: 15px;
+      margin-right: 15px;
+      font-family: 'Baloo 2', cursive;
+			padding: 3px;
+			font-size: 20px;
+      border-radius: 30px;
+      /* background-color: rgb(255, 214, 235); */
+
+    }
+
+    .table {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    td {
+        width: 33%;
+    }
+    h1 {
+        margin: auto;
+        padding-top: 9px;
+        border-radius: 25px;
+        text-align: center;
+        align-items: center;
+        font-size: 57px; 
+        font-weight: bolder;
+        font-family: 'Arima Madurai', cursive;
+        background-color: rgb(255, 243, 173);
+        box-shadow: 3px 3px 5px rgb(255, 218, 54);
+        color: rgb(243, 89, 141); }
+    
+        .quest{
+        margin: auto;
+        border-radius: 23px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 20pt;
+        /* box-shadow: 2px 2px 2px rgb(228, 145, 192);  
+        background-color: rgb(255, 142, 230);    */
+        background-color: rgb(255, 148, 223);
+        box-shadow: 3px 3px 5px rgb(214, 39, 136);
+        color: rgb(255, 255, 255);
+        margin-bottom: 40px;
+        }
+     
+    </style>
+  </head>
+
+  <body>
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+      <a href="index.html">HOME</a>
+      <a href="mechanics.html">MECHANICS</a>
+      <a href="categories.html">PLAY</a>
+      <a href="about.html">ABOUT</a>
+    </div>
+
+    <div id="main">
+      <img class="openbtn" src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/277270369_400125631449103_8245141027743103520_n.png?_nc_cat=105&ccb=1-5&_nc_sid=ae9488&_nc_eui2=AeGmTW3CKgtlY3rSW0AQ8DDSio9H2Luh2juKj0fYu6HaO_STXhR6VhOa-V6YoqIlPFWQwWVWipswTDJ9vO4oBgiA&_nc_ohc=Y8dAtQKsBe4AX9z5wah&_nc_ht=scontent.fmnl4-2.fna&oh=03_AVJ_UgoNe0mWkIcDdDddcXObUb-HIvaQMN2L_1U3iQjnSg&oe=626CD275" onclick="openNav()" width="135" alt="logo">
+    </div>
+
+    <div class="container-fluid">
+        <h1>HulaHallyu Cheat Sheet</h1>
+    <p class ="quest">I'll let you on in a little secret ~</p>
+    <div class="row">
+      <div class="col">
+      <!-- <h4>About HulaHallyu</h4>
+      <p>HulaHallyu is a game inspired by the K-Pop and K-Drama quizzes that can be seen online, but we added the well-known industry of Korean Food or K-Food as one of our categories.</p> -->
+
+      <h3 style="font-size: 37px">K-Drama</h3>
+      <!-- <p> If you are an avid Hallyu fan, then this game is for you!</p> -->
+      <table class="table">
+          <tr>
+              <td>
+                <h3>Easy Round</h3>
+                <p>1. Goblin: The Lonely and Great God</p>
+        <p>2. What's Wrong with Secretary Kim?</p>
+        <p>3. True Beauty</p>
+              </td>
+
+              <td>
+                <h3>Average Round</h3>
+                <p>1. Weightlifting Fairy Kim Bok Joo</p>
+        <p>2. Dr. Romantic</p>
+        <p>3. Vagabond</p>
+              </td>
+
+              <td>
+              <h3>Difficlut Round</h3>
+                <p>1. Moon Lovers: Scarlet Heart Ryeo</p>
+        <p>2. My Love From The Star</p>
+        <p>3. While You Were Sleeping</p>
+        </td>
+          </tr>
+      </table>
+
+      <h3 style="font-size: 37px">K-Pop</h3>
+      <!-- <p> If you are an avid Hallyu fan, then this game is for you!</p> -->
+      <table class="table">
+          <tr>
+              <td>
+                <h3>Easy Round</h3>
+                <p>1. BTS</p>
+        <p>2. Blink</p>
+        <p>3. Nine (9)</p>
+              </td>
+
+              <td>
+                <h3>Average Round</h3>
+                <p>1. April 8, 2012</p>
+        <p>2. Into the New World</p>
+        <p>3. Uhm Jung Hwa</p>
+              </td>
+
+              <td>
+              <h3>Difficlut Round</h3>
+              <p>1. MAMAMOO - Starry Night</p>
+              <p>2. Paradise</p>
+              <p>3. 66</p>
+        </td>
+          </tr>
+      </table>
+  </div>
+  </body>
+</html>
